@@ -163,12 +163,13 @@ def boyerMooreSearch(text, pattern, N, L):
 
         # j 가 아직 양수인 경우에 나쁜문자테이블과 좋은접미부 테이블 중 더 크게 shift 할 수 있는 정도를 취해서 이동한다
         if j > 0:
-            # get 을 사용하면 만약 해당 문자를 얻지 못한경우 pattern 의 길이만큼 이동하게 된다.
+            # get 을 사용하면 만약 해당 문자를 얻지 못한경우 pattern 의 길이만큼 이동하게 된다
             badCharShift = badCharTable.get(text[i+j-1], len(pattern))
             goodSuffixShift = goodSuffixTable[L-j]
             shift = max(badCharShift, goodSuffixShift)
             i += shift
         else:
+            print("found at {}".format(i))
             return i
     return -1
 
