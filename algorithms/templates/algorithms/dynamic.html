@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <br><br>
+    <h1>DP 알고리즘</h1><br>
+    <form action="{% url 'algorithms:calc_dynamic' %}" method="POST">
+        {% include 'algorithms/form.html' %}
+    </form>
+
+    <br><br>
+
+    {% include 'algorithms/table.html' %}
+{% endblock content %}
+    

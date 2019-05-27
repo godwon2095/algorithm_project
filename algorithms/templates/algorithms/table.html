@@ -1,0 +1,22 @@
+<table class="table table-dark">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">N 값</th>
+        <th scope="col">L 값</th>
+        <th scope="col">M 값</th>
+        <th scope="col">소요시간(ms)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ record.n_size }}</td>
+        <td>{{ record.l_size }}</td>
+        <td>{{ record.m_size }}</td>
+        <td>{{ record.time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
